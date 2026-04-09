@@ -16,7 +16,7 @@ class EmployeeManagerSystem:
     def main(self):
         """员工管理系统的入口"""
         # 1、加载和读取员工数据文件
-        self.lod_employee()
+        self.load_employee()
         while True:
             # 2、显示系统欢迎界面
             self.show_hello()
@@ -25,7 +25,7 @@ class EmployeeManagerSystem:
             menu_number = int(input('请输入你需要使用的功能编号'))
 
             if menu_number == 7:
-                self.go_out
+                self.go_out()
                 break
             elif menu_number == 1:
                 self.add_employee()
@@ -76,7 +76,7 @@ class EmployeeManagerSystem:
 
     def show_all_employee(self):
         """展示所有的员工信息"""
-        print('姓名\t年龄\t性别\t手机号码\t是否离职')
+        print('姓名\t性别\t年龄\t手机号码\t是否离职')
         for emp in self.employee_list:
             print(emp)
 
@@ -101,7 +101,7 @@ class EmployeeManagerSystem:
         update_name = input('请输入要修改的员工姓名：')
         # 2、遍历员工列表，判断是否存在，存在即删除
         for emp in self.employee_list:
-            if update_name == update_name:   # 员工存在
+            if emp.name == update_name:   # 员工存在
                 self.save_flag = False    # 完成了一次修改，必须要保存数据
                 # 修改员工的其他属性
                 new_name = input('请输入新的姓名（不修改：Enter）：').strip()
@@ -176,7 +176,7 @@ class EmployeeManagerSystem:
         print('7:退出系统')
         print('-'*60)
 
-    def lod_employee(self):
+    def load_employee(self):
         """
         读取员工数据文件，把所有的员工信息都放在一个列表中。
         :return:
@@ -188,6 +188,8 @@ class EmployeeManagerSystem:
             f = open(self.employee_data_file, 'w', encoding='utf-8')
         else:   # 没有报错，文件存在  读取文件中的数据
             data = f.read()
+            if not data.strip():   # 文件为空，跳过解析
+                return
             lst = eval(data)   # 把文件的内容（字符串），当成python表达式解析。
             for dict1 in lst:
                 self.employee_list.append(

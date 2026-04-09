@@ -1,5 +1,4 @@
 #创建字典
-from types import new_class
 
 dict2 = {}   #空字典
 dict1 = {'name':'sunny','age':21}  #冒号前面为键（key），后面为值（value）,key是唯一的

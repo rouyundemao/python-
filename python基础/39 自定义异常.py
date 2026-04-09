@@ -16,7 +16,7 @@ def input_password():
     pwd = input('请输入你的密码：')
     # 规定密码的长度不能少于6个字符
     if len(pwd) < 6:
-        raise PasswordToShortError(6, len(pwd))
+        raise PasswordToShortError(len(pwd), 6)  # 第一个参数是实际长度，第二个是最小长度
 
 if __name__ == '__main__':
     try:
