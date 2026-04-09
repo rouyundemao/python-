@@ -96,7 +96,7 @@ users = {
 for user_name, user_info in users.items():
     print(f'\nUsername: {user_name}')
     
-    full_name = f'{user_info['first']} {user_info['last']}'
+    full_name = f"{user_info['first']} {user_info['last']}"
     location = user_info['location']
     print(f"\tFull name: {full_name.title()}")
     print(f"\tLocation: {location.title()}")
@@ -118,30 +118,30 @@ for peo in people:
 
 # 2、宠物　创建多个表示宠物的字典，每个字典都包含宠物的类型及其主人的名字。将这些字典存储在一个名为 pets 的列表中，再遍历该列表，并将有关每个宠物的所有信息打印出来。
 
-pet1 = {'type': 'cat', 'ower': 'Alice'}
-pet2 = {'type': 'dog', 'ower': 'Bob'}
-pet3 = {'type': 'parrot', 'ower': 'Charlie'}
-pet4 = {'type': 'hamster', 'ower': 'David'}
-pet5 = {'type': 'turtle', 'ower': 'Emma'}
+pet1 = {'type': 'cat', 'owner': 'Alice'}
+pet2 = {'type': 'dog', 'owner': 'Bob'}
+pet3 = {'type': 'parrot', 'owner': 'Charlie'}
+pet4 = {'type': 'hamster', 'owner': 'David'}
+pet5 = {'type': 'turtle', 'owner': 'Emma'}
 
 pets = [pet1, pet2, pet3, pet4, pet5]
 
 for pet in pets:
     print(f"\n宠物类型是:{pet['type']}")
-    print(f"宠物的主人是:{pet['ower']}")
+    print(f"宠物的主人是:{pet['owner']}")
     
 
 # 3、喜欢的地方　创建一个名为 favorite_places 的字典。
     # 在这个字典中，将三个人的名字用作键，并存储每个人喜欢的 1～3 个地方。为让这个练习更有趣些，让一些朋友说出他们喜欢的几个地方。
     # 遍历这个字典，并将其中每个人的名字及其喜欢的地方打印出来。
 
-favorite_palces = {
+favorite_places = {
     'Alice': ['金字塔', '长城', '马岭河峡谷'],
     'Bob': ['长江', '纽约', '莫斯科'],
     'Emma':['复活岛', '泰姬陵']
     }
 
-for name, place in favorite_palces.items():
+for name, place in favorite_places.items():
     print(f'\n{name}喜欢的地方有：')
     for pla in place:
         print(f'-{pla}-')

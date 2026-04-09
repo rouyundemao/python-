@@ -12,3 +12,4 @@ def my_sum(n):
 
 def test(n: int) -> int:
     print('my_module2中的test函数')
+    return n

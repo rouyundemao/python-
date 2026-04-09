@@ -17,7 +17,7 @@ for magician in magicians:
 
 # 在 for 循环中执行更多的操作
 for magician in magicians:
-        print(f'{magician},tath was a greet trick!')
+        print(f'{magician}, that was a great trick!')
 
 # 避免缩进错误
 # 常见错误
