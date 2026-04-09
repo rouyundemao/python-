@@ -10,7 +10,6 @@ def copy_dir(source_dir, destination_dir):
     :return:  返回总拷贝文件数量
     '''
     count = 0
-    sum
     for f in os.listdir(source_dir):  # 其中的f代表目录下的每一个文件（目录）名字
         # 把文件名和目录拼凑成一个绝对路径
         f_path = os.path.join(source_dir, f)
@@ -59,5 +58,6 @@ def copy_file(source_dir, sink_file):
     sink_f.close()
     return 1
 
-copy_dir(r'/sunny_网络爬虫', r'E:\jianpianDownload')
+# 使用示例（请根据实际路径修改）：
+# copy_dir('/path/to/source_dir', '/path/to/destination_dir')
 

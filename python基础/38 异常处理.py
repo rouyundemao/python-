@@ -6,6 +6,7 @@ import traceback
 
 # 捕获异常
 
+f = None   # 提前声明，避免 finally 中出现 NameError
 try:
     f = open('afc.txt')
     s = f.readline()
